@@ -1,12 +1,11 @@
 package com.kotlinizer.dependencyinjectionexample
 
 import android.app.Application
-import com.kotlinizer.dependencyInjection.IDependencyInjector
-import com.kotlinizer.dependencyInjection.Injector
+import com.kotlinizer.injection.Injector
 
 class MainApplication : Application() {
 
-	private val injector: IDependencyInjector by lazy { Injector.instance }
+	private val injector: Injector by lazy { Injector.instance }
 
 	override fun onCreate() {
 		super.onCreate()

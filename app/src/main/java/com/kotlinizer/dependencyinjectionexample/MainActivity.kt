@@ -14,11 +14,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.kotlinizer.dependencyInjection.IDependencyInjector
-import com.kotlinizer.dependencyInjection.Injector
+import com.kotlinizer.injection.Injector
 
 class MainActivity : AppCompatActivity() {
-	private val injector: IDependencyInjector by lazy { Injector.instance }
+	private val injector: Injector by lazy { Injector.instance }
 	private val textValue = mutableStateOf("")
 
 	override fun onCreate(savedInstanceState: Bundle?) {
